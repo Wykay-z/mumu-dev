@@ -1,4 +1,6 @@
 $(function(){
+	
+	//点击对话输入框或者对话显示区域时隐藏样式和颜文字键盘
 	$("#chat-box-input").click(function(){
 		if ($('#keyboard-face').is(':visible')) {
 			$('#keyboard-face').hide();
@@ -6,7 +8,17 @@ $(function(){
 		if ($('#keyboard-color').is(':visible')) {
 			$('#keyboard-color').hide();
 		}
+	});	
+	$("#dialog-list").click(function(){
+		if ($('#keyboard-face').is(':visible')) {
+			$('#keyboard-face').hide();
+		}
+		if ($('#keyboard-color').is(':visible')) {
+			$('#keyboard-color').hide();
+		}
 	});
+	
+	// 点击样式或颜文字按钮显示相应的键盘
 	$("#color-btn").click(function(){
 		if ($('#keyboard-face').is(':visible')) {
 			$('#keyboard-face').hide();
@@ -21,7 +33,7 @@ $(function(){
 	});
 
 
-
+	// 向对话输入框添加颜文字
 	$("#keyboard-face span").click(function(){
 		var text = $(this).text();
 		var chatInput = $("#chat-box-input").val();
@@ -35,6 +47,7 @@ $(function(){
 //	  setCookie('userStyle','color1',365);
 //	};
 	
+	// 修改样式
 	$("#keyboard-color span").click(function(){
 		colorStyle = $(this).attr("class");
 		console.log(colorStyle);
@@ -51,6 +64,9 @@ $(function(){
 	      	$.scrollTo('#dialog-list', printWall.scrollHeight);
 	    }
 	});
+	
+
+	
 });
 
 $(document).keydown(function (event) {

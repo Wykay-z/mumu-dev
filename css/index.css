@@ -231,15 +231,13 @@ div[data-role="panel"] {
 	display: inline-block;
 	padding: 5px 12px;
 	max-width: 90%;
+	 word-break:break-all;
 	overflow: visible !important;
 	border-radius: 4px;
 	margin-top: 10px;
 	clear: both;
 }
 
-#dialog-list li p {
-	white-space: normal;
-}
 
 #dialog-list p.others-reply {
 	float: left;
