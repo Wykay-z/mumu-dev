@@ -313,8 +313,8 @@ div[data-role="footer"] {
 #keyboard-face,
 #keyboard-color {
 	background: #fafafa;
-	height: 180px;
-	padding: 10px 4%;
+	height: 170px;
+	padding: 2px 4% 8px;
 	overflow: hidden;
 	display: none;
 }
@@ -348,6 +348,32 @@ div[data-role="footer"] {
 #keyboard-color span:nth-child(4n) {
 	margin-right: 0;
 }
+
+#page-nav {
+	display: none;
+}
+#page_navigation {
+	width: 100%;
+	background: #fafafa;
+	height: 10px;
+	line-height: 10px;
+	text-align: center;
+}
+#page_navigation a{
+	display: inline-block;
+	width: 16px;
+	height: 3px;
+	background: #eee;
+	margin: 4px;
+	text-decoration: none;
+}
+a.active_page{
+	background: #aaa !important;
+}
+
+
+
+
 
 /* ---------- dialog box styles --------*/
 .color0 {

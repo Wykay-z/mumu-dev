@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery分页演示效果</title>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var show_per_page = 16; 
+	var number_of_items;
+	if ($('#keyboard-face').is(':visible')) {
+		number_of_items = $('#keyboard-face').children().size();
+	} else if ($('#keyboard-color').is(':visible')) {
+		number_of_items = $('#keyboard-color').children().size();
+	} else {
+		number_of_items = $('#keyboard-face').children().size();
+	}
+	console.log(number_of_items);
+	var number_of_pages = Math.ceil(number_of_items/show_per_page);
+	$('#current_page').val(0);
+	$('#show_per_page').val(show_per_page);
+	var navigation_html = '<a class="previous_link" href="javascript:previous();"></a>';
+	var current_link = 0;
+	while(number_of_pages > current_link){
+//		navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
+		navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+'</a>';
+		current_link++;
+	}
+	navigation_html += '<a class="next_link" href="javascript:next();"></a>';
+	$('#page_navigation').html(navigation_html);
+	$('#page_navigation .page_link:first').addClass('active_page');
+	$('#keyboard-face').children().css('display', 'none');
+	$('#keyboard-face').children().slice(0, show_per_page).css('display', 'block');	
+});
+
+function previous(){
+	new_page = parseInt($('#current_page').val()) - 1;
+	if($('.active_page').prev('.page_link').length==true){
+		go_to_page(new_page);
+	}
+}
+
+function next(){
+	new_page = parseInt($('#current_page').val()) + 1;
+	//if there is an item after the current active link run the function
+	if($('.active_page').next('.page_link').length==true){
+		go_to_page(new_page);
+	}
+	
+}
+function go_to_page(page_num){
+	var show_per_page = parseInt($('#show_per_page').val());
+	start_from = page_num * show_per_page;
+	end_on = start_from + show_per_page;
+	$('#keyboard-face').children().css('display', 'none').slice(start_from, end_on).css('display', 'block');
+	$('.page_link[longdesc=' + page_num +']').addClass('active_page').siblings('.active_page').removeClass('active_page');
+	$('#current_page').val(page_num);
+}
+</script>
+<style>
+#keyboard-face,
+#keyboard-color {
+	background: #fafafa;
+	height: 180px;
+	padding: 10px 4%;
+	overflow: hidden;
+}
+#keyboard-face {
+	display: none;
+}
+
+#keyboard-face span {
+	font-size: .8em;
+	font-weight: normal;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	width: 24%;
+	float: left;
+	cursor: pointer;
+}
+
+#keyboard-color span {
+	font-size: .8em;
+	font-weight: normal;
+	text-align: center;
+	height: 30px;
+	line-height: 30px;
+	width: 21%;
+	margin-right: 5%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	float: left;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+#keyboard-color span:nth-child(4n) {
+	margin-right: 0;
+}
+#page_navigation {
+	width: 100%;
+	background: #fafafa;
+	height: 10px;
+	text-align: center;
+}
+#page_navigation a{
+	display: inline-block;
+	width: 16px;
+	height: 3px;
+	background: #eee;
+	margin: 4px;
+	text-decoration: none;
+}
+a.active_page{
+	background: #aaa !important;
+}
+</style>
+</head>
+<body>
+	<input type='hidden' id='current_page' />
+	<input type='hidden' id='show_per_page' />
+	<div id='page_navigation'></div>
+	<div id="keyboard-color">
+				<span class="color1">綠青</span>
+				<span class="color2">刈安</span>
+				<span class="color3">水淺蔥</span>
+				<span class="color4">紅緋</span>
+				<span class="color5">江戶茶</span>
+				<span class="color6">熨斗目花</span>
+				<span class="color7">蘇芳</span>
+				<span class="color8">萱草</span>
+				<span class="color9">黃唐茶</span>
+				<span class="color10">白茶</span>
+				<span class="color11">花葉</span>
+				<span class="color12">柳染</span>
+				<span class="color13">青碧</span>
+				<span class="color14">藍墨茶</span>
+				<span class="color15">灑落柿</span>
+				<span class="color16">裏柳</span>
+				<span class="color14">藍墨茶</span>
+				<span class="color15">灑落柿</span>
+				<span class="color16">裏柳</span>
+			</div>
+	<div id="keyboard-face">
+		
+		
+				<span>( ´･･)ﾉ(._.`)</span>
+				<span>(｡・ω・｡)</span>
+				<span>(＠_＠;)</span>
+				<span>o(一︿一+)o</span>
+				<span>(#`O′)</span>
+				<span>(°ー°〃)</span>
+				<span>（＝。＝）</span>
+				<span>(ーー゛)</span>
+				<span>(ー`´ー)</span>
+				<span>♪(^∇^*)</span>
+				<span>╰(*°▽°*)╯</span>
+				<span>ヽ(✿ﾟ▽ﾟ)ノ</span>
+				<span>(ノへ￣、)</span>
+				<span>(๑•̀ㅂ•́)و✧</span>
+				<span>（。＾▽＾）</span>
+				<span>(ง •_•)ง</span>
+				<span>(＞﹏＜)</span>
+				<span>(o≖◡≖)</span>
+				<span>(。﹏。*)</span>
+				<span>┗( T﹏T )┛</span>
+				<span>( ´･･)ﾉ(._.`)</span>
+				<span>(｡・ω・｡)</span>
+				<span>(＠_＠;)</span>
+				<span>o(一︿一+)o</span>
+				<span>(#`O′)</span>
+				<span>(°ー°〃)</span>
+				<span>（＝。＝）</span>
+				<span>(ーー゛)</span>
+				<span>(ー`´ー)</span>
+				<span>♪(^∇^*)</span>
+				<span>╰(*°▽°*)╯</span>
+				<span>ヽ(✿ﾟ▽ﾟ)ノ</span>
+				<span>(ノへ￣、)</span>
+				<span>(๑•̀ㅂ•́)و✧</span>
+				<span>（。＾▽＾）</span>
+				<span>(ง •_•)ง</span>
+				<span>(＞﹏＜)</span>
+				<span>(o≖◡≖)</span>
+				<span>(。﹏。*)</span>
+				<span>┗( T﹏T )┛</span>
+				<span>(＞﹏＜)</span>
+				<span>(o≖◡≖)</span>
+				<span>(。﹏。*)</span>
+				<span>┗( T﹏T )┛</span>
+			</div>
+	<br>
+<br>
+</body>
+</html>
