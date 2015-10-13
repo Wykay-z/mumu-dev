@@ -25,7 +25,7 @@ $(function(){
 	});
 	
 	// 点击样式或颜文字按钮显示相应的键盘
-	$("#color-btn").click(function(){
+	$("#color-btn").unbind("click").click(function(){
 		if ($('#keyboard-face').is(':visible')) {
 			$('#keyboard-face').hide();
 			$('#page-nav').hide();
@@ -34,7 +34,7 @@ $(function(){
 		$("#keyboard-color").fadeToggle("fast");
 		pageNav("#keyboard-color");
 	});
-	$("#face-btn").click(function(){
+	$("#face-btn").unbind("click").click(function(){
 		if ($('#keyboard-color').is(':visible')) {
 			$('#keyboard-color').hide();
 			$('#page-nav').hide();
@@ -91,19 +91,27 @@ $(function(){
 function pageNav(keyboard) {
 		var show_per_page = 16; 
 		var keyboard_items = $(keyboard);
-		var number_of_items = $(keyboard).children().size();
+		var number_of_items = keyboard_items.children().size();
 		var number_of_pages = Math.ceil(number_of_items/show_per_page);
 		$('#current_page').val(0);
 		$('#show_per_page').val(show_per_page);
-		var navigation_html = '<a class="previous_link" href="javascript:previous();"></a>';
+		
+		var navigation_html = "";
+//		navigation_html = '<a class="previous_link" href="javascript:previous();"></a>';
 		var current_link = 0;
 		while(number_of_pages > current_link){
-	//		navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
+//			navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+ (current_link + 1) +'</a>';
 			navigation_html += '<a class="page_link" href="javascript:go_to_page(' + current_link +')" longdesc="' + current_link +'">'+'</a>';
 			current_link++;
 		}
-		navigation_html += '<a class="next_link" href="javascript:next();"></a>';
+//		navigation_html += '<a class="next_link" href="javascript:next();"></a>';
 		$('#page_navigation').html(navigation_html);
+		keyboard_items.unbind("swipeleft").on("swipeleft",function(){
+		    next();
+		});
+		keyboard_items.unbind("swiperight").on("swiperight",function(){
+		    previous();
+		});
 		$('#page_navigation .page_link:first').addClass('active_page');
 		keyboard_items.children().css('display', 'none');
 		keyboard_items.children().slice(0, show_per_page).css('display', 'block');
@@ -111,16 +119,20 @@ function pageNav(keyboard) {
 }
 
 function previous(){
-		new_page = parseInt($('#current_page').val()) - 1;
+		
 		if($('.active_page').prev('.page_link').length==true){
+			new_page = parseInt($('#current_page').val()) - 1;
+			console.log(new_page);
 			go_to_page(new_page);
 		}
 	}
 
 	function next(){
-		new_page = parseInt($('#current_page').val()) + 1;
+		
 		//if there is an item after the current active link run the function
 		if($('.active_page').next('.page_link').length==true){
+			new_page = parseInt($('#current_page').val()) + 1;
+			console.log(new_page);
 			go_to_page(new_page);
 		}
 
