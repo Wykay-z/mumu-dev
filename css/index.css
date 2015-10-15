@@ -377,158 +377,236 @@ a.active_page{
 
 /* ---------- dialog box styles --------*/
 .color0 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #333 !important;
 	background-color: #fff !important;
 }
 .color1 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #24936e !important;
 }
 .color2 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #e9cd4c !important;
 }
 .color3 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #66bab7 !important;
 }
 .color4 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #f75c2f !important;
 }
 .color5 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #af5f3c !important;
 }
 .color6 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #316175 !important;
 }
 .color7 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #8e354a !important;
 }
 .color8 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #fa9f55 !important;
 }
 .color9 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #c18a26 !important;
 }
 .color10 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #bda17a !important;
 }
 .color11 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #f7c242 !important;
 }
 .color12 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #91ad70 !important;
 }
 .color13 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #2b8784 !important;
 }
 .color14 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #373c38 !important;
 }
 .color15 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #feba88 !important;
 }
 .color16 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #b5caa0 !important;
 }
 .color17 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #db4d6d !important;
 }
 .color18 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #eb7a77 !important;
 }
 .color19 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #f05e1c !important;
 }
 .color20 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #ffb11b !important;
 }
 .color21 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #7d6c46 !important;
 }
 .color22 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #867835 !important;
 }
 .color23 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #86c166 !important;
 }
 .color24 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #6a8372 !important;
 }
 .color25 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #a28c37 !important;
 }
 .color26 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #376b6d !important;
 }
 .color27 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #4a225d !important;
 }
 .color28 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #52433d !important;
 }
 .color29 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #69b0ac !important;
 }
 .color30 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #78c2c4 !important;
 }
 .color31 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #c78550 !important;
 }
 .color32 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #91ad70 !important;
 }
 .color33 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #4f726c !important;
 }
 .color34 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #58b2dc !important;
 }
 .color35 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #8b81c3 !important;
 }
 .color36 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #787d7b !important;
 }
 .color37 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #ca7a2c !important;
 }
 .color38 {
+	transition: all .5s;
+    -webkit-transition: all .5s; /* Safari 3.1 to 6.0 */
 	color: #fff !important;
 	background-color: #0089a7 !important;
 }
