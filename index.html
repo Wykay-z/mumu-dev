@@ -8,12 +8,16 @@
 	<link rel="stylesheet" href="css/themes/webapp.min.css">
 	<link rel="stylesheet" href="css/themes/jquery.mobile.icons.min.css">
 	<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.min.css" />
+	<link rel="stylesheet" href="css/css/animation.css">
+    <link rel="stylesheet" href="css/css/fontello-embedded.css">
 
 	<script src="js/jquery-1.11.3.min.js"></script>
 	<script src="js/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/jquery.scrollTo.js"></script>
 
 	<link rel="stylesheet" href="css/index.css">
+	<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+	<script src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
 	<script src="js/index.js"></script>
 	<script>
 		$( document ).on( "pagecreate", function() {
@@ -33,9 +37,13 @@
 		<div data-theme="a" class="panel-header">
 			<div class="search-n-loc">
 				<input type="search">
-				<a href="" class="location">定位</a>
+				<a href="" class="location">
+					<i class="icon-location"></i>
+				</a>
 			</div>
-			<div class="create-room">+ 创建房间</div>
+			<a class="create-room">
+				<i class="icon-shop"></i> 创建房间
+			</a>
 
 		</div>
 
@@ -120,7 +128,9 @@
 		</div>
 
 		<div class="panel-footer">
-			<a href="#setting-page"  data-transition="pop"  id="setting">设置</a>
+			<a href="#setting-page"  data-transition="pop"  id="setting">
+				<i class="icon-setting"></i>
+			</a>
 			<span id="app-version">木木 v1.0</span>
 
 		</div>
@@ -136,16 +146,22 @@
 		<!-- /header -->
 
 		<div data-role="content" id="dialog-list">
-
+			
 		</div>
 		<!-- /content -->
 
 		<div data-role="footer"  data-position="fixed">
-			<div  id="chat-box">
-				<div id="color-btn" class="color0">a</div>
+			<div  id="chat-box" class="color0">
+				<div id="color-btn" class="">
+					<i class="icon-params"></i>
+				</div>
 				<input type="text" id="chat-box-input" class="color0">
-				<div id="face-btn"  class="color0">^_^</div>
-				<div id="send-btn"  class="color0">发送</div>
+				<div id="face-btn"  class="">
+					<i class="icon-emo-thumbsup"></i>
+				</div>
+				<div id="send-btn"  class="">
+					<i class="icon-paper-plane"></i>
+				</div>
 			</div>
 
 			<div id="page-nav">

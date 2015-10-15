@@ -24,6 +24,7 @@ var colorStyle;
 
 var printWall = document.getElementById('dialog-list');
 
+var chatBox = document.getElementById('chat-box');
 var styleBtn = document.getElementById('color-btn');
 var inputSend = document.getElementById('chat-box-input');
 var emojiBtn = document.getElementById('face-btn');
@@ -190,6 +191,22 @@ function sendMsg() {
     alert('空的发不出去＝。＝');
     return;
   }
+	
+	//sendBtn动画
+	var sendBtn=$("#send-btn");
+	sendBtn.velocity({ 
+		opacity: [ 1, 0 ], 
+		transformOriginX: [ "50%", "100%" ], 
+		transformOriginY: [ "80%", "100%" ], 
+		scaleX: [ 1, 0 ], 
+		scaleY: [ 1, 0 ], 
+		translateX: [ 0, 100 ], 
+		translateY: [ 0, -100 ],
+		translateZ: 0
+	},{
+		duration: 150
+	});
+	
 
   // 向这个房间发送消息，这段代码是兼容多终端格式的，包括 iOS、Android、Window Phone
   room.send({
@@ -199,9 +216,11 @@ function sendMsg() {
   }, function(data) {
 
     // 发送成功之后的回调
+	  
     inputSend.value = '';
     // showLog('（' + formatTime(data.t) + '）  自己： ', val);
     showLog('', val);
+	  
     console.log(printWall.scrollTop, printWall.scrollHeight);
     printWall.scrollTop = printWall.scrollHeight;
   });
@@ -299,11 +318,27 @@ function showLog(msg, data, isBefore) {
   p.innerHTML = msg;
   p.className += colorStyle + " " + posStyle;
 
+	
   if (isBefore) {
     printWall.insertBefore(p, printWall.childNodes[0]);
   } else {
-    printWall.appendChild(p);
+	  p.style.opacity = "0";
+	   
+	  printWall.appendChild(p);
+	  
+	  //对话内容发出动画
+	  var thisP = $(p);
+	  thisP.velocity({ 
+			opacity: [1,0], 
+			  translateX: [ 0, -800 ] , 
+			  translateY: [ 0, 200 ] 
+		},{
+			  duration: 100
+		});
+
+    
   }
+	
 }
 // 转译bug
 function encodeHTML(source) {
@@ -382,10 +417,14 @@ function removeClass(obj, cls) {
 }
 function changeStyle(cls){
   var before = inputSend.className;
+	var before = chatBox.className;
 //  removeClass(styleBtn, before);
 //  addClass(styleBtn, cls);
   removeClass(inputSend, before);
   addClass(inputSend, cls); 
+	
+  removeClass(chatBox, before);
+  addClass(chatBox, cls); 
 //  removeClass(emojiBtn, before);
 //  addClass(emojiBtn, cls); 
 //  removeClass(sendBtn, before);
@@ -417,3 +456,4 @@ function uuid() {
 function diaoyong(){
   alert("调用成功");
 }
+
