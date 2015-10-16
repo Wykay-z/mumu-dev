@@ -14,6 +14,8 @@ $(function(){
 		if ($('#page-nav').is(':visible')) {
 			$('#page-nav').hide();
 		}
+		$("#color-btn").removeClass("color00");
+		$("#face-btn").removeClass("color00");
 	});	
 	$("#dialog-list").click(function(){
 		if ($('#keyboard-face').is(':visible')) {
@@ -25,6 +27,8 @@ $(function(){
 		if ($('#page-nav').is(':visible')) {
 			$('#page-nav').hide();
 		}
+		$("#color-btn").removeClass("color00");
+		$("#face-btn").removeClass("color00");
 	});
 	
 	// 点击样式或颜文字按钮显示相应的键盘
@@ -35,6 +39,8 @@ $(function(){
 		}
 		$('#page-nav').fadeToggle("fast");
 		$("#keyboard-color").fadeToggle("fast");
+		$("#face-btn").removeClass("color00");
+		$(this).toggleClass("color00");
 		pageNav("#keyboard-color");
 	});
 	$("#face-btn").unbind("click").click(function(){
@@ -44,7 +50,10 @@ $(function(){
 		}
 		$('#page-nav').fadeToggle("fast");
 		$("#keyboard-face").fadeToggle("fast");
+		$("#color-btn").removeClass("color00");
+		$(this).toggleClass("color00");
 		pageNav("#keyboard-face");
+		 
 	});
 
 
@@ -52,10 +61,10 @@ $(function(){
 	$("#keyboard-face span").click(function(){
 		var text = $(this).text();
 		var chatInput = $("#chat-box-input").val();
-		console.log(chatInput);
 		$("#chat-box-input").val(chatInput+text);
 		$('#keyboard-face').hide();
 		$('#page-nav').hide();
+		$('#chat-box-input').focus();
 	});
 	
 //	styleBtn.onclick = function(){
@@ -71,6 +80,7 @@ $(function(){
 		setCookie('userStyle', colorStyle, 365);
 		$('#keyboard-color').hide();
 		$('#page-nav').hide();
+		$('#chat-box-input').focus();
 	});
 
 	$("#send-btn").click(function(){
@@ -82,7 +92,12 @@ $(function(){
 	    }
 	});
 	
-	
+	$("#chat-box-input").focus(function(){
+		$("#send-btn").css("opacity","1");
+	})
+	$("#chat-box-input").blur(function(){
+		$("#send-btn").css("opacity",".4");
+	})
 
 	
 });

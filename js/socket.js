@@ -195,7 +195,7 @@ function sendMsg() {
 	//sendBtn动画
 	var sendBtn=$("#send-btn");
 	sendBtn.velocity({ 
-		opacity: [ 1, 0 ], 
+//		opacity: [ .5, 1 ], 
 		transformOriginX: [ "50%", "100%" ], 
 		transformOriginY: [ "80%", "100%" ], 
 		scaleX: [ 1, 0 ], 
@@ -204,7 +204,7 @@ function sendMsg() {
 		translateY: [ 0, -100 ],
 		translateZ: 0
 	},{
-		duration: 150
+		duration: 300
 	});
 	
 
@@ -333,7 +333,7 @@ function showLog(msg, data, isBefore) {
 			  translateX: [ 0, -800 ] , 
 			  translateY: [ 0, 200 ] 
 		},{
-			  duration: 100
+			  duration: 300
 		});
 
     
