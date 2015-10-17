@@ -85,7 +85,7 @@ p {
 
 /*************   left-menu panel   **************/
 div[data-role="panel"] {
-	background-color: #303938;
+	background-color: #2d2e30;
 	color: #fff;
 	height: 100%;
 	position: fixed;

@@ -41,7 +41,7 @@
 					<i class="icon-location"></i>
 				</a>
 			</div>
-			<a class="create-room">
+			<a href="#add-room-page" data-transition="fade" class="create-room">
 				<i class="icon-shop"></i> 创建房间
 			</a>
 
@@ -110,25 +110,14 @@
 						<span class="room-type">类型</span>
 						<span class="room-num">30人</span>
 					</div>
-				</li>
-				<li>
-					<div>
-						<h1 class="room-name">动院111</h1>
-						<span class="room-loc">>20m</span>
-					</div>
-					<div>
-						<span class="room-type">类型</span>
-						<span class="room-num">30人</span>
-					</div>
-				</li>
-
+				</li> 
 
 			</ul>
 
 		</div>
 
 		<div class="panel-footer">
-			<a href="#setting-page"  data-transition="pop"  id="setting">
+			<a href="#setting-page" data-transition="fade" id="setting">
 				<i class="icon-setting"></i>
 			</a>
 			<span id="app-version">木木 v1.0</span>
@@ -138,7 +127,7 @@
 
 	<div id="main-page" data-role="page">
 
-		<div data-role="header" data-position="fixed" data-theme="a">
+		<div id="main-header" data-role="header" data-position="fixed" data-theme="a">
 			<h1>动院咖啡厅</h1>
 			<a href="#left-menu" class="jqm-navmenu-link ui-btn ui-btn-icon-notext ui-corner-all ui-icon-bars ui-nodisc-icon ui-alt-icon ui-btn-left" style="border:none;">Menu</a>
 
@@ -150,12 +139,12 @@
 		</div>
 		<!-- /content -->
 
-		<div data-role="footer"  data-position="fixed">
-			<div  id="chat-box" class="color0">
+		<div id="main-footer" data-role="footer"  data-position="fixed">
+			<div  id="chat-box" class="color1">
 				<div id="color-btn" class="color0">
 					<i class="icon-t-shirt"></i>
 				</div>
-				<input type="text" id="chat-box-input" class="color0">
+				<input type="text" id="chat-box-input" class="color1">
 				<div id="face-btn"  class="color0">
 					<i class="icon-emo-tongue"></i>
 				</div>

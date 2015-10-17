@@ -434,7 +434,7 @@ function changeStyle(cls){
 // 获取高度
 function getHeight(){
   var height_screen = screen.height;
-  var height = height_screen - 90;
+  var height = height_screen - document.getElementById('main-header').offsetHeight - document.getElementById('main-footer').offsetHeight;
   document.getElementById("dialog-list").style.height = height+"px";
   // document.getElementById("room-list").style.height = height+"px"; zheng???
 }

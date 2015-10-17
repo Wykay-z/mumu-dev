@@ -2,7 +2,6 @@ $(function(){
 	
 	
 	
-	
 	//点击对话输入框或者对话显示区域时隐藏样式和颜文字键盘
 	$("#chat-box-input").click(function(){
 		if ($('#keyboard-face').is(':visible')) {
@@ -88,7 +87,7 @@ $(function(){
 	      	main();
 	    } else {
 	      	sendMsg();
-	      	$.scrollTo('#dialog-list', printWall.scrollHeight);
+			$.scrollTo('#dialog-list', printWall.scrollHeight);
 	    }
 	});
 	
