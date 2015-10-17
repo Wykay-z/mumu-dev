@@ -208,11 +208,13 @@ div[data-role="panel"] {
 	position: fixed;
 	top: 0;
 	z-index: 1000;
-	background-image: url(../image/bg-header.min.svg), none;
-	background-color: #fff;
+/*	background-image: url(../image/bg-header.min.svg), none;*/
+	background-image: url(../image/bg2.png), none;
+	background-color: none;
 	background-repeat: repeat-x;
-	background-position-y: 102%;
+	background-position-y: 100%;
 	border-bottom-width: 0;
+/*	box-shadow: 1px 1px 1px #000;*/
 }
 
 #main-page div[data-role="footer"] {
