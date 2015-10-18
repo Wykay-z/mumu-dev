@@ -222,7 +222,7 @@ div[data-role="panel"] {
 .header-deco {
 /*	background: none;*/
 	position: absolute;
-	bottom: -8px;
+	bottom: -7px;
 	left: 0;
 	display: block;
 	height: 8px;
@@ -241,7 +241,7 @@ div[data-role="panel"] {
 /*	padding: 0;*/
 	background-color: #f7f8f9;
 	background-image: url(../image/bg-pattern.min.svg), none;
-	overflow: hidden;
+/*	overflow: hidden;*/
 /*	text-align: center;*/
 }
 
