@@ -208,15 +208,27 @@ div[data-role="panel"] {
 	position: fixed;
 	top: 0;
 	z-index: 1000;
+	background: #492a16;
+	color: #fff;
 /*	background-image: url(../image/bg-header.min.svg), none;*/
-	background-image: url(../image/bg2.png), none;
-	background-color: none;
-	background-repeat: repeat-x;
-	background-position-y: 100%;
+	background-image: url(../image/coffee.png);
+/*	background-color: #000;*/
+	background-repeat: no-repeat;
+	background-position: right 60%;
+	background-size: auto 180%;
 	border-bottom-width: 0;
 /*	box-shadow: 1px 1px 1px #000;*/
 }
-
+.header-deco {
+/*	background: none;*/
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	display: block;
+	height: 8px;
+	width: 100%;
+	background: url(../image/bg2.png) repeat-x;
+}
 #main-page div[data-role="footer"] {
 	position: fixed;
 	bottom: 0;
@@ -226,13 +238,15 @@ div[data-role="panel"] {
 #dialog-list {
 	margin: 0;
 	padding: 16px;
-	background-color: #f7f8fc;
+/*	padding: 0;*/
+	background-color: #f7f8f9;
 	background-image: url(../image/bg-pattern.min.svg), none;
+	overflow: hidden;
 /*	text-align: center;*/
 }
 
 #dialog-list p {
-	display: inline-block;
+	display: block;
 	padding: 5px 12px;
 	max-width: 90%;
 	word-break:break-all;
@@ -242,6 +256,18 @@ div[data-role="panel"] {
 	margin-right: 2px;
 	clear: both;
 }
+/*
+#dialog-list p {
+	padding: 10px 12px;
+	width: 100%;
+	word-break:break-all;
+	overflow: visible !important;
+	clear: both;
+	border-bottom: 1px solid;
+	text-align: center;
+	border-bottom-color: rgba(255,255,255,.15);
+}
+*/
 
 
 #dialog-list p.others-reply {
