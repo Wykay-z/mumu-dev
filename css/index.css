@@ -85,8 +85,8 @@ p {
 
 /*************   left-menu panel   **************/
 div[data-role="panel"] {
-	background-color: #2d2e30;
-	color: #fff;
+	background-color: #f0f0f0;
+	color: #565656;
 	height: 100%;
 	position: fixed;
 }
@@ -96,30 +96,32 @@ div[data-role="panel"] {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 84px;
+	height: 44px;
 	z-index: 1000;
 }
 
 .panel-header .search-n-loc {
-	height: 44px;
-	background: #2b926f;
+	height: 46px;
+	background: #eaeaea;
 	padding: 8px 16px;
+	border-bottom: 2px solid #ddd;
 }
 
 .panel-header input {
 	outline: none;
 	border: none;
-	background: #fff;
+	background: rgba(0,0,0,.2);
 	border-radius: 4px;
-	height: 28px;
+	height: 30px;
 	width: 85%;
 	float: left;
 }
 
 .panel-header a.location {
-	color: #fff !important;
+	color: #565656 !important;
+	font-size: 1.2em;
 	line-height: 28px;
-	margin-left: 5%;
+	margin-left: 2%;
 	float: right;
 }
 
@@ -129,8 +131,10 @@ div[data-role="panel"] {
 	height: 40px !important;
 	line-height: 40px;
 	text-align: center;
-	background: #383938;
-	color: #2b926f !important;
+	background: #eaeaea;
+	color: #3f87d1 !important;
+	border-bottom: 2px solid #ddd;
+	border-top: 1px solid #ddd;
 }
 
 .panel-footer {
@@ -140,43 +144,45 @@ div[data-role="panel"] {
 	width: 100%;
 	height: 44px;
 	line-height: 44px;
-	background-color: #2d2e30;
-	border-top: 1px solid #252525;
+	background-color: #eaeaea;
+	border-top: 1px solid #ddd;
 }
 
 .panel-footer a#setting {
 	margin-left: 16px;
-	color: #ddd !important;
-	font-size: .9em;
+	color: 565656 !important;
+	font-size: 1.1em;
 }
 
 .panel-footer #app-version {
 	float: right;
 	margin-right: 16px;
-	color: #666;
+	color: #aaa;
 	font-size: .8em;
 }
 
 .panel-content {
-	margin-top: 84px;
+	margin-top: 48px;
 	margin-bottom: 44px;
 }
 
 #room-list {
-	background: #2d2e30 !important;
+	background: #f0f0f0 !important;
 	overflow: auto;
 	overflow-x: hidden;
 }
 
 #room-list li {
-	background: inherit !important;
-	color: #fff;
+	background: #f0f0f0 !important;
+	color: #565656;
 	border-width: 0px;
-	border-bottom: 1px solid #252525;
+/*	border-bottom: 1px solid #ddd;*/
 	clear: both;
 	padding: 12px 16px;
 }
-
+#room-list li:hover, #room-list li:active {
+	background: #f7f7f7 !important;
+}
 #room-list li div {
 	display: block;
 	clear: both;
@@ -187,20 +193,29 @@ div[data-role="panel"] {
 	float: left;
 }
 
+
 #room-list li .room-loc,
 #room-list li .room-num {
 	float: right;
 }
 
 #room-list li .room-loc {
+	margin-top: 8px;
 	font-size: .8em;
-	color: #2b926f;
+	color: #f0f0f0;
+	background: #3f87d1;
+	padding: 2px 6px;
+	border-radius: 6px;
 }
 
 #room-list li .room-type,
 #room-list li .room-num {
 	font-size: .8em;
-	color: #aaa;
+	color: #989898;
+}
+#room-list li .room-type {
+	margin-left: -2px;
+	color: #3f87d1;
 }
 
 /**************   main-page *****************/
@@ -208,6 +223,7 @@ div[data-role="panel"] {
 	position: fixed;
 	top: 0;
 	z-index: 1000;
+/*	background: #492a16;*/
 	background: #492a16;
 	color: #fff;
 /*	background-image: url(../image/bg-header.min.svg), none;*/
@@ -228,6 +244,7 @@ div[data-role="panel"] {
 	height: 8px;
 	width: 100%;
 	background: url(../image/bg2.png) repeat-x;
+	background-repeat-y: no-repeat;
 }
 #main-page div[data-role="footer"] {
 	position: fixed;
@@ -239,7 +256,7 @@ div[data-role="panel"] {
 	margin: 0;
 	padding: 16px;
 /*	padding: 0;*/
-	background-color: #f7f8f9;
+	background-color: #f0f0f0;
 	background-image: url(../image/bg-pattern.min.svg), none;
 /*	overflow: hidden;*/
 /*	text-align: center;*/
