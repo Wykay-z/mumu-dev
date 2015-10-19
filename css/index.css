@@ -85,8 +85,8 @@ p {
 
 /*************   left-menu panel   **************/
 div[data-role="panel"] {
-	background-color: #f0f0f0;
-	color: #565656;
+	background-color: #2d2e30;
+	color: rgba(255,255,255,.9);
 	height: 100%;
 	position: fixed;
 }
@@ -96,29 +96,29 @@ div[data-role="panel"] {
 	left: 0;
 	top: 0;
 	width: 100%;
-	height: 44px;
+	height: 84px;
 	z-index: 1000;
 }
 
 .panel-header .search-n-loc {
-	height: 46px;
-	background: #eaeaea;
+	height: 44px;
+	background: #3f87d1;
 	padding: 8px 16px;
-	border-bottom: 2px solid #ddd;
+/*	border-bottom: 2px solid #ddd;*/
 }
 
 .panel-header input {
 	outline: none;
 	border: none;
-	background: rgba(0,0,0,.2);
+	background: #fff;
 	border-radius: 4px;
-	height: 30px;
+	height: 28px;
 	width: 85%;
 	float: left;
 }
 
 .panel-header a.location {
-	color: #565656 !important;
+	color: #eee !important;
 	font-size: 1.2em;
 	line-height: 28px;
 	margin-left: 2%;
@@ -131,10 +131,12 @@ div[data-role="panel"] {
 	height: 40px !important;
 	line-height: 40px;
 	text-align: center;
-	background: #eaeaea;
-	color: #3f87d1 !important;
-	border-bottom: 2px solid #ddd;
-	border-top: 1px solid #ddd;
+	background: #376fba;
+	color: #eee !important;
+	border-bottom: 2px solid;
+	border-bottom-color: rgba(255,255,255,.1);
+	border-top: 1px solid;
+	border-top-color: rgba(255,255,255,.1);
 }
 
 .panel-footer {
@@ -144,44 +146,45 @@ div[data-role="panel"] {
 	width: 100%;
 	height: 44px;
 	line-height: 44px;
-	background-color: #eaeaea;
-	border-top: 1px solid #ddd;
+	background-color: #2d2e30;
+	border-top: 1px solid;
+	border-top-color: rgba(255,255,255,.1);
 }
 
 .panel-footer a#setting {
 	margin-left: 16px;
-	color: 565656 !important;
-	font-size: 1.1em;
+	color: #ccc !important;
+	font-size: 1em;
 }
 
 .panel-footer #app-version {
 	float: right;
 	margin-right: 16px;
-	color: #aaa;
+	color: #666;
 	font-size: .8em;
 }
 
 .panel-content {
-	margin-top: 48px;
+	margin-top: 84px;
 	margin-bottom: 44px;
 }
 
 #room-list {
-	background: #f0f0f0 !important;
+	background: #2d2e30 !important;
 	overflow: auto;
 	overflow-x: hidden;
 }
 
 #room-list li {
-	background: #f0f0f0 !important;
-	color: #565656;
+	background: inherit !important;
+	color: rgba(255,255,255,.9);
 	border-width: 0px;
 /*	border-bottom: 1px solid #ddd;*/
 	clear: both;
 	padding: 12px 16px;
 }
 #room-list li:hover, #room-list li:active {
-	background: #f7f7f7 !important;
+	background: #343434 !important;
 }
 #room-list li div {
 	display: block;
@@ -199,23 +202,22 @@ div[data-role="panel"] {
 	float: right;
 }
 
-#room-list li .room-loc {
+#room-list li .room-num {
 	margin-top: 8px;
 	font-size: .8em;
-	color: #f0f0f0;
-	background: #3f87d1;
-	padding: 2px 6px;
-	border-radius: 6px;
+	color: rgba(255,255,255,.5);
+/*	background: #3f87d1;*/
+/*	padding: 2px 6px;*/
+/*	border-radius: 6px;*/
 }
 
 #room-list li .room-type,
-#room-list li .room-num {
+#room-list li .room-loc {
 	font-size: .8em;
-	color: #989898;
+	color: #3f87d1;
 }
 #room-list li .room-type {
 	margin-left: -2px;
-	color: #3f87d1;
 }
 
 /**************   main-page *****************/
@@ -224,7 +226,7 @@ div[data-role="panel"] {
 	top: 0;
 	z-index: 1000;
 /*	background: #492a16;*/
-	background: #492a16;
+	background: #3f87d1;
 	color: #fff;
 /*	background-image: url(../image/bg-header.min.svg), none;*/
 	background-image: url(../image/coffee.png);
@@ -238,12 +240,15 @@ div[data-role="panel"] {
 .header-deco {
 /*	background: none;*/
 	position: absolute;
-	bottom: -7px;
+	bottom: -5px;
 	left: 0;
 	display: block;
-	height: 8px;
+	height: 7px;
 	width: 100%;
 	background: url(../image/bg2.png) repeat-x;
+/*	-webkit-background-size: auto 80%;*/
+/*	-moz-background-size: auto 80%;*/
+/*	background-size: auto 80%;*/
 	background-repeat-y: no-repeat;
 }
 #main-page div[data-role="footer"] {
@@ -256,7 +261,7 @@ div[data-role="panel"] {
 	margin: 0;
 	padding: 16px;
 /*	padding: 0;*/
-	background-color: #f0f0f0;
+	background-color: #f7f8f9;
 	background-image: url(../image/bg-pattern.min.svg), none;
 /*	overflow: hidden;*/
 /*	text-align: center;*/
