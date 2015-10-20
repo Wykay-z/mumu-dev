@@ -1,5 +1,13 @@
 $(function(){
 	
+	var width = $(window).width();
+	var spanWidth = $(".header-deco span").width();
+	var triangleDiv = $(".header-deco");
+	var stringSpan = "";
+	for(var i=0; i<width/spanWidth+10; i++) {
+		stringSpan += "<span></span>";
+	}
+	triangleDiv.html(stringSpan);
 	
 	
 	//点击对话输入框或者对话显示区域时隐藏样式和颜文字键盘
@@ -176,7 +184,7 @@ $(document).keydown(function (event) {
 	    } else {
 			
 	      	sendMsg();
-			
+			$("..ui-input-text").height(32);
 	    }
     };
 });
